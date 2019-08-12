@@ -10,6 +10,48 @@
   </head>
 
   <body>
+    <header class="row">
+      <div class="col-3">
+        <div class="circle">
+          <br />
+          You know
+          <br />
+          you need
+          <br />
+          Code
+        </div>
+      </div>
+      <div>
+        LOGO
+      </div>
+      <div class="col-4 slogan">
+        Splurting out unsolicited advice about entrepreneurship since 2016
+      </div>
+      
+      <div class="col-5 links">
+        <%= link_to 'Contribute', '#' %>
+        <%= link_to "About", '#' %>
+      </div>
+
+    </header>
+
+    <hr/>
+    <br class="clear">
+    <div class="clear" />
     <%= yield %>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <%= link_to "This isn't enough, I need more", "#" %>
+          </div>
+          <div class="col-6 footer-blurb">
+            Slowly learing Code <a href="[YOUR-PORTFOLIO-URL]"[Brian Randall]</a><br />
+            Want to buil your own Splurty Web App - <a href="http://online.bootcampspot.com">Learn how to code here</a> 
+          </div>
+      </div>
+    </div>
   </body>
 </html>
