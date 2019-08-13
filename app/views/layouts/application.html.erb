@@ -31,7 +31,7 @@
       </div>
       
       <div class="col-5 links">
-        <%= link_to 'Contribute', 'new_quote_path' %>
+        <%= link_to 'Contribute', new_quote_path %>
         <%= link_to "About", '#' %>
       </div>
 
@@ -45,6 +45,13 @@
 
     <div class="footer">
       <div class="container">
+        <% if flash[:error].present? %>
+          <div class="col-10 offset-1 alert alert-danger">
+            <%= flash[:error].html_safe %>
+          </div>
+          <% end %>
+          <% yield %>
+      </div>
         <div class="row">
           <div class="col-6">
             <%= link_to "This isn't enough, I need more", root_path, class: 'next-quote' %>
@@ -54,6 +61,5 @@
             Want to buil your own Splurty Web App - <a href="http://online.bootcampspot.com">Learn how to code here</a> 
           </div>
       </div>
-    </div>
   </body>
 </html>
